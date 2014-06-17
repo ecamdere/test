@@ -1,3 +1,5 @@
 <?php
 
-echo __FILE__;
+echo PHP_EOL. __FILE__;
+
+
