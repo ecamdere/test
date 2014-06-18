@@ -21,3 +21,5 @@ class Foo
 	 	// $howdy is not used 
 	}
 }
+
+
