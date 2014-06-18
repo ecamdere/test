@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Standard (name-of-your-coding-standard)">
+
+	<description>A custom coding standard</description>
+
+	<exclude-pattern>/tests/*</exclude-pattern>
+ 	<exclude-pattern>/data/*</exclude-pattern>
+
+	<rule ref="Generic.Files.LineLength.MaxExceeded">
+		<message>Line contains %s chars, which is longer than the max limit of %s</message>
+	</rule>
+	
+	<rule ref="Generic.Files.LineLength.TooLong">
+		<message>Line longer than %s characters; contains %s characters</message>
+	</rule>
+
+	 <rule ref="Generic.PHP.DisallowShortOpenTag" />
+ 
+</ruleset>
