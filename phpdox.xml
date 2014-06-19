@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<phpdox xmlns="http://xml.phpdox.net/config" silent="false">
+<phpdox xmlns="http://phpdox.net/config">
 
   <project name="Example-name-of-project" source="${basedir}/src" workdir="${basedir}/build/api/xml">
 
@@ -8,7 +8,7 @@
     	<exclude mask="*Autoload.php" />
     </collector>
 
-    <generator output="${basedir}/build/api/docs">
+    <generator output="${basedir}/build/api">
 
         <build engine="html" enabled="true" output="html">
             <template dir="${phpDox.home}/templates/html" />
