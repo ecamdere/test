@@ -37,7 +37,7 @@
  </target>
 
  <target name="lint" description="Perform syntax check of sourcecode files">
-  <apply executable="php" failonerror="true" checkreturn="1">
+  <apply executable="php" failonerror="true">
    <arg value="-l" />
 
    <fileset dir="${basedir}/src">
@@ -119,7 +119,7 @@
  </target>
 
  <target name="phpunit" description="Run unit tests with PHPUnit">
-  <exec executable="/var/www/phpqatools/vendor/bin/phpunit" failonerror="true" logoutput="true" checkreturn="1"/>
+  <exec executable="/var/www/phpqatools/vendor/bin/phpunit" failonerror="true" logoutput="true"/>
  </target>
 
  <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
