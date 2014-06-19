@@ -53,7 +53,7 @@
  </target>
 
  <target name="phploc" description="Measure project size using PHPLOC">
-  <exec executable="/var/www/phpqatools/vendor/bin/phploc" logoutput="true">
+  <exec executable="/var/www/phpqatools/vendor/bin/phploc">
    <arg value="--count-tests" />
    <arg value="--log-csv" />
    <arg value="${basedir}/build/logs/phploc.csv" />
@@ -62,7 +62,7 @@
  </target>
 
  <target name="pdepend" description="Calculate software metrics using PHP_Depend">
-  <exec executable="/var/www/phpqatools/vendor/bin/pdepend" logoutput="true">
+  <exec executable="/var/www/phpqatools/vendor/bin/pdepend">
    <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
    <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
    <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
@@ -72,7 +72,7 @@
 
  <target name="phpmd"
          description="Perform project mess detection using PHPMD and print human readable output. Intended for usage on the command line before committing.">
-  <exec executable="/var/www/phpqatools/vendor/bin/phpmd" logoutput="true">
+  <exec executable="/var/www/phpqatools/vendor/bin/phpmd">
    <arg path="${basedir}/src" />
    <arg value="text" />
    <arg value="${basedir}/build/phpmd.xml" />
@@ -80,7 +80,7 @@
  </target>
 
  <target name="phpmd-ci" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
-  <exec executable="/var/www/phpqatools/vendor/bin/phpmd" logoutput="true">
+  <exec executable="/var/www/phpqatools/vendor/bin/phpmd">
    <arg path="${basedir}/src" />
    <arg value="xml" />
    <arg value="${basedir}/build/phpmd.xml" />
@@ -91,7 +91,7 @@
 
  <target name="phpcs"
          description="Find coding standard violations using PHP_CodeSniffer and print human readable output. Intended for usage on the command line before committing.">
-  <exec executable="/var/www/phpqatools/vendor/bin/phpcs" logoutput="true">
+  <exec executable="/var/www/phpqatools/vendor/bin/phpcs">
    <arg value="--standard=${basedir}/build/phpcs.xml" />
    <arg path="${basedir}/src" />
   </exec>
@@ -115,11 +115,11 @@
  </target>
 
  <target name="phpdox" description="Generate API documentation using phpDox">
-  <exec executable="/var/www/phpqatools/vendor/bin/phpdox"/>
+  <exec executable="/var/www/phpqatools/vendor/bin/phpdox" />
  </target>
 
  <target name="phpunit" description="Run unit tests with PHPUnit">
-  <exec executable="/var/www/phpqatools/vendor/bin/phpunit" failonerror="true" logoutput="true"/>
+  <exec executable="/var/www/phpqatools/vendor/bin/phpunit" failonerror="true" />
  </target>
 
  <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
