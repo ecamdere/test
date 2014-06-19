@@ -27,6 +27,3 @@ class FOO
 	}
 
 }
-
-echo 'errorrrrrrrr
-
