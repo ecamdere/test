@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="name-of-project" default="build" basedir=".">
+<project name="name-of-project" default="build">
  <target name="build"
    depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpunit,phpcb"/>
 
@@ -20,20 +20,20 @@
  </target>
 
  <target name="clean" description="Cleanup build artifacts">
-  <delete dir="${project.basedir}/build/api"/>
-  <delete dir="${project.basedir}/build/code-browser"/>
-  <delete dir="${project.basedir}/build/coverage"/>
-  <delete dir="${project.basedir}/build/logs"/>
-  <delete dir="${project.basedir}/build/pdepend"/>
+  <delete dir="${basedir}/build/api"/>
+  <delete dir="${basedir}/build/code-browser"/>
+  <delete dir="${basedir}/build/coverage"/>
+  <delete dir="${basedir}/build/logs"/>
+  <delete dir="${basedir}/build/pdepend"/>
  </target>
 
  <target name="prepare" depends="clean" description="Prepare for build">
-  <mkdir dir="${project.basedir}/build/api"/>
-  <mkdir dir="${project.basedir}/build/code-browser"/>
-  <mkdir dir="${project.basedir}/build/coverage"/>
-  <mkdir dir="${project.basedir}/build/logs"/>
-  <mkdir dir="${project.basedir}/build/pdepend"/>
-  <mkdir dir="${project.basedir}/build/phpdox"/>
+  <mkdir dir="${basedir}/build/api"/>
+  <mkdir dir="${basedir}/build/code-browser"/>
+  <mkdir dir="${basedir}/build/coverage"/>
+  <mkdir dir="${basedir}/build/logs"/>
+  <mkdir dir="${basedir}/build/pdepend"/>
+  <mkdir dir="${basedir}/build/phpdox"/>
  </target>
 
  <target name="lint" description="Perform syntax check of sourcecode files">
