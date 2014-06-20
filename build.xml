@@ -36,6 +36,7 @@
   <mkdir dir="${basedir}/build/phpdox"/>
  </target>
 
+
  <target name="lint" description="Perform syntax check of sourcecode files">
   <apply executable="php" failonerror="true">
    <arg value="-l" />
@@ -51,6 +52,7 @@
    </fileset>
   </apply>
  </target>
+
 
  <target name="phploc" description="Measure project size using PHPLOC">
   <exec executable="/var/www/phpqatools/vendor/bin/phploc">
