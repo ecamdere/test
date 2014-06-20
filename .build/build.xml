@@ -116,8 +116,6 @@
 
  <target name="phpdox" description="Generate API documentation using phpDox">
   <exec executable="/var/www/phpqatools/vendor/bin/phpdox" />
-    <arg value="-f" />
-    <arg value="${basedir}/.build/phpdox.xml" />
  </target>
 
  <target name="phpunit" description="Run unit tests with PHPUnit">
