@@ -38,6 +38,7 @@
 
 
  <target name="lint" description="Perform syntax check of sourcecode files">
+  <echo message="Linting php files" />
   <apply executable="php" failonerror="true">
    <arg value="-l" />
 
