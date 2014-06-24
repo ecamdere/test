@@ -5,7 +5,3 @@ This is an example of integrating a PHP application with the Jenkins PHP templat
 ====
 
 ## Installation
-
-
-====
-
