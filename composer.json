@@ -1,0 +1,33 @@
+{
+  "name": "jenkins-php",
+  "description": "A meta package for the PHP Quality Assurance Toolchain tools required by the Template for Jenkins Jobs for PHP Projects, http://jenkins-php.org/",
+  "keywords": [
+    "php","qa","tools","jenkins"
+  ],
+  "type": "metapackage",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Emre CAMDERE"
+    }
+  ],
+  "config": {
+    "bin-dir": "bin"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "phpmd/phpmd": "1.*",
+    "sebastian/phpcpd": "*",
+    "phploc/phploc": "*",
+    "sebastian/phpdcd": "*",
+    "pdepend/pdepend": "1.*",
+    "phpunit/phpunit": "4.*",
+    "phpunit/php-invoker": "*",
+    "phpdocumentor/phpdocumentor": "*",
+    "theseer/phpdox": "*",
+    "theseer/fxsl": "*",
+    "mayflower/php-codebrowser": "*",
+    "pear/pear_exception": "dev-master",
+    "phing/phing": "*"
+  }
+}
